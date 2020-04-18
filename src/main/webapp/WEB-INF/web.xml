@@ -1,0 +1,25 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>My web application</display-name>
+
+  <welcome-file-list> // 5 когда мы стучимся  в My web application - мы попадаем в index.jsp
+    <welcome-file>
+      index.jsp
+    </welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <servlet-name>user</servlet-name> // 3 объявляем что есть servlet с таким именем
+    <servlet-class>com.java.org.example.controller.UserController</servlet-class> // 4 servlet user относится к этому классу
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>user</servlet-name> // 2
+    <url-pattern>/user</url-pattern> // 1 если запрос по адресу /user, тогда образщаемся к  servlet-name user
+  </servlet-mapping>
+
+
+</web-app>
